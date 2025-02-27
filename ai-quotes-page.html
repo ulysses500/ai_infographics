@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiring AI Quotes</title>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --accent-color: #ff006e;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .quote-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .quote-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .quote-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            z-index: 2;
+        }
+        
+        .quote-text {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 25px;
+            font-weight: 500;
+            z-index: 2;
+        }
+        
+        .quote-text::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            color: rgba(58, 134, 255, 0.1);
+            z-index: -1;
+        }
+        
+        .quote-explanation {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.1;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .quotes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .quote-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .quote-card:nth-child(1) { animation-delay: 0.1s; }
+        .quote-card:nth-child(2) { animation-delay: 0.2s; }
+        .quote-card:nth-child(3) { animation-delay: 0.3s; }
+        .quote-card:nth-child(4) { animation-delay: 0.4s; }
+        .quote-card:nth-child(5) { animation-delay: 0.5s; }
+        .quote-card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wisdom in the Age of AI</h1>
+            <p class="subtitle">Inspiring thoughts on navigating the intersection of human ingenuity and artificial intelligence in our rapidly evolving world. By Nicolas MARTIN, Fractal Apps. </p>
+			<p class="subtitle"> Go to <a href="https://ulysses500.github.io/ai_infographics/ai-success-drivers-cheatsheet.html">AI Success Drivers infographic</a>.</p>
+        </header>
+        
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <p class="quote-text">In the age of AI, success belongs to those who adapt and evolve with technology.</p>
+                <p class="quote-explanation">This quote underscores the critical need to embrace AI as a transformative force, emphasizing that adaptability is essential for thriving in today's rapidly changing world.</p>
+                <i class="quote-icon fas fa-robot"></i>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">AI is a tool, not a replacement. True success lies in the synergy between human ingenuity and artificial intelligence.</p>
+                <p class="quote-explanation">Highlighting the collaborative potential of AI, this quote suggests that the most successful outcomes arise from blending human creativity and intuition with technological power.</p>
+                <i class="quote-icon fas fa-brain"></i>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">With great power comes great responsibility. The successful use of AI requires ethical foresight and a commitment to the greater good.</p>
+                <p class="quote-explanation">This speaks to the ethical dimensions of AI, reminding us that leveraging its capabilities effectively demands a mindful approach focused on positive impact.</p>
+                <i class="quote-icon fas fa-balance-scale"></i>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">The currency of success in the AI-driven world is knowledge. Stay curious, stay learning.</p>
+                <p class="quote-explanation">This quote emphasizes the value of continuous learning and intellectual curiosity, positioning them as vital for navigating and succeeding in an AI-influenced landscape.</p>
+                <i class="quote-icon fas fa-book-open"></i>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">AI is the catalyst for a new era of success, where the only limit is our imagination.</p>
+                <p class="quote-explanation">Celebrating AI's role in unlocking innovation, this quote inspires us to see technology as a springboard for boundless possibilities, limited only by our own vision.</p>
+                <i class="quote-icon fas fa-lightbulb"></i>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">A thousand machines may till the field, but only the farmer's heart knows when to sow.</p>
+                <p class="quote-explanation">The "thousand machines" symbolize the power and efficiency of AI, much like tools that transform labor. The "farmer's heart" represents human intuition, judgment, and values.</p>
+                <i class="quote-icon fas fa-seedling"></i>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 AI Wisdom Collection | Based on <a href="https://www.fractal-apps.com/blog/the-new-success-drivers-with-ai">"The New Success Drivers with AI"</a> by Nicolas MARTIN, Fractal Apps</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.quote-card');
+            
+            // Intersection Observer for animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
