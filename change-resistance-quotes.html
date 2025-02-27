@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embracing Change: Wisdom from Fractal Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #16a085;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+            background: linear-gradient(145deg, #f9f9f9, #f0f0f0);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            border-radius: 2px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            font-weight: 300;
+        }
+        
+        .attribution {
+            font-style: italic;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .quote-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .quote-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .quote-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .quote-content {
+            padding: 2.5rem 1.5rem 1.5rem;
+        }
+        
+        .quote-text {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.2rem;
+            line-height: 1.4;
+        }
+        
+        .quote-text::before {
+            content: """;
+            position: absolute;
+            left: -0.5rem;
+            top: -0.7rem;
+            font-size: 3.5rem;
+            color: rgba(22, 160, 133, 0.2);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .quote-explanation {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+        
+        .icon-container {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: rgba(22, 160, 133, 0.3);
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: #777;
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+        
+        .wave-divider {
+            margin: 2rem 0;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .wave-divider svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .quote-card {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .quote-card:nth-child(1) { animation-delay: 0.1s; }
+        .quote-card:nth-child(2) { animation-delay: 0.2s; }
+        .quote-card:nth-child(3) { animation-delay: 0.3s; }
+        .quote-card:nth-child(4) { animation-delay: 0.4s; }
+        .quote-card:nth-child(5) { animation-delay: 0.5s; }
+        .quote-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @media (max-width: 768px) {
+            .quote-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Cost of Resisting Change</h1>
+            <p class="subtitle">Insights on embracing change, adapting to new realities, and the hidden costs of resistance</p>
+            <p class="attribution">Inspired by "Why Resistance to Change Costs More Than You Think" from Fractal Apps</p>
+        </header>
+        
+        <div class="wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#16a085" fill-opacity="0.1" d="M0,192L48,181.3C96,171,192,149,288,154.7C384,160,480,192,576,197.3C672,203,768,181,864,154.7C960,128,1056,96,1152,101.3C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        
+        <div class="quote-container">
+            <div class="quote-card">
+                <div class="quote-number">1</div>
+                <div class="quote-content">
+                    <p class="quote-text">Resisting change is like holding back the tide; it delays the inevitable and costs you dearly.</p>
+                    <p class="quote-explanation">This quote uses the metaphor of an unstoppable tide to illustrate that change cannot be avoided. Resistance only postpones the inevitable while increasing financial, competitive, or personal costs, a central theme of the article.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-water"></i>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-number">2</div>
+                <div class="quote-content">
+                    <p class="quote-text">Embrace change as the wind in your sails, guiding you to uncharted waters of opportunity.</p>
+                    <p class="quote-explanation">Portraying change as a positive force, this quote encourages viewing it as a catalyst for growth and innovation—key benefits highlighted in the article for those who accept change rather than fight it.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-wind"></i>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-number">3</div>
+                <div class="quote-content">
+                    <p class="quote-text">Change is the heartbeat of life; to resist it is to deny the rhythm of progress.</p>
+                    <p class="quote-explanation">This quote emphasizes the inevitability of change as a fundamental aspect of existence. Resisting it, as the article suggests, hinders progress and development, both individually and organizationally.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-number">4</div>
+                <div class="quote-content">
+                    <p class="quote-text">True success lies not in avoiding change, but in mastering the art of adaptation.</p>
+                    <p class="quote-explanation">Redefining success, this quote reflects the article's focus on adaptability as essential for thriving in a dynamic environment, rather than clinging to outdated methods or mindsets.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-number">5</div>
+                <div class="quote-content">
+                    <p class="quote-text">Stagnation lurks in the shadows of resistance, ready to extinguish the flame of progress.</p>
+                    <p class="quote-explanation">With vivid imagery, this quote warns of the article's highlighted consequence of resisting change: stagnation, which silently undermines innovation and competitiveness.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-fire-alt"></i>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <div class="quote-number">6</div>
+                <div class="quote-content">
+                    <p class="quote-text">Lead change, or it will lead you; the path you choose determines the price you pay.</p>
+                    <p class="quote-explanation">This quote underscores the article's call for proactive change management. Taking control of change can minimize its costs, while reacting passively allows it to dictate outcomes, often at a higher price.</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-compass"></i>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 | Wisdom on Embracing Change | Inspired by Fractal Apps</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.quote-card');
+            
+            // Intersection Observer for animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
